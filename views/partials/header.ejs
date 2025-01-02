@@ -6,9 +6,15 @@
         <!-- Navigation Menu -->
         <nav>
             <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link text-white mx-1 fs-5 active">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white mx-1 fs-5">About</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white mx-1 fs-5">Work</a></li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link text-white mx-1 fs-5 <%= currentPage === 'home' ? 'active' : '' %>">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link text-white mx-1 fs-5 <%= currentPage === 'about' ? 'active' : '' %>">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/work" class="nav-link text-white mx-1 fs-5 <%= currentPage === 'work' ? 'active' : '' %>">Work</a>
+                </li>
             </ul>
         </nav>
         <!-- Social Media Icons -->

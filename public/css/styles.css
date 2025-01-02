@@ -1,0 +1,57 @@
+/* Style for navigation links */
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+/* Underline effect for navigation links */
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: left 0.5s ease-in-out;
+}
+/* Apply underline effect on hover and active state */
+.nav-link:hover::before, .nav-link.active::before {
+    left: 0;
+}
+/* Transition effect for social media icons */
+.media-icons {
+    transition: transform 0.2s ease-in-out;
+}
+/* Scale effect on hover for social media icons */
+.media-icons:hover {
+    transform: scale(1.5);
+}
+/* Shadow effect for the navbar */
+.navbar-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+/* Thicker shadow effect for the navbar */
+.navbar-shadow-thick {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease-in-out;
+}
+/* Transition effect for the navbar */
+#navbar {
+    transition: box-shadow 0.3s ease-in-out;
+}
+/* Center elements in the header on mobile devices */
+@media (max-width: 768px) {
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header-content nav {
+        margin-top: 10px;
+    }
+    .header-content .social-icons {
+        margin-top: 10px;
+    }
+}

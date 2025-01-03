@@ -10,10 +10,32 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-light">
-     <!-- Background Image wrapper -->
+    <!-- Background Image wrapper -->
     <div class="container-fluid p-0" style="object-fit: cover; height: 100vh; background-image: url('images/draft_webpage_lower_resolution.JPG'); background-position: center; background-size: cover; background-repeat: no-repeat;">
         
-    <%- include("partials/header.ejs") %>
+        <%- include("partials/header.ejs") %>
+
+        <!-- About Section -->
+        <section class="about-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h1 class="display-4">About Maria Karra</h1>
+                        <p class="lead">Discover the journey and works of Maria Karra, an artist dedicated to exploring the depths of creativity and expression.</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <img src="images/about_image.jpg" alt="Maria Karra" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="mb-4">Biography</h2>
+                        <p>Maria Karra is an artist whose work spans various mediums and styles. Her journey began at a young age, inspired by the world around her and the desire to express her unique perspective. Over the years, Maria has developed a distinctive voice in the art world, known for her innovative techniques and thought-provoking pieces.</p>
+                        <p>Her work has been exhibited in numerous galleries and has garnered critical acclaim for its depth and originality. Maria continues to push the boundaries of her craft, always seeking new ways to engage and inspire her audience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div>
 

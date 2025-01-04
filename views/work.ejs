@@ -62,27 +62,17 @@
         <a id="music">Music</a>
     </div>
 
-     <!-- Image Gallery -->
-     <div class="container mt-4">
+     <!-- Projects Section -->
+    <div class="container mt-4">
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <img src="images/draft_webpage_lower_resolution.jpg" class="img-fluid img-shadow" alt="Gallery Image 1">
-            </div>
-            <div class="col-md-4 mb-4">
-                <img src="images/draft_webpage_lower_resolution.jpg" class="img-fluid img-shadow" alt="Gallery Image 2">
-            </div>
-            <div class="col-md-4 mb-4">
-                <img src="images/draft_webpage_lower_resolution.jpg" class="img-fluid img-shadow" alt="Gallery Image 3">
-            </div>
-            <div class="col-md-4 mb-4">
-                <img src="images/draft_webpage_lower_resolution.jpg" class="img-fluid img-shadow" alt="Gallery Image 4">
-            </div>
-            <div class="col-md-4 mb-4">
-                <img src="images/draft_webpage_lower_resolution.jpg" class="img-fluid img-shadow" alt="Gallery Image 5">
-            </div>
-            <div class="col-md-4 mb-4">
-                <img src="images/draft_webpage_lower_resolution.jpg" class="img-fluid img-shadow" alt="Gallery Image 6">
-            </div>
+            <% projects.forEach((project) => { %>
+                <div class="col-md-4 mb-4">
+                    <a href="/projects/<%= project.id %>">
+                        <img src="<%= project.images[0] %>" class="img-fluid img-shadow" alt="<%= project.title %>">
+                        <h5 class="text-center mt-2"><%= project.title %></h5>
+                    </a>
+                </div>
+            <% }); %>
         </div>
     </div>
 

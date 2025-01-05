@@ -31,20 +31,47 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            top: 40%;
-            left: 40%;
-            transform: translate(-50%, -50%);
             text-align: left;
-            max-width: 50%;
-            padding: 2rem;
+            top: 10%;
+            left: 14.9%;
+            max-width: 90%; /* Ensure responsiveness for smaller screens */
+            
+            padding: 1rem; /* Add padding for spacing */
+            
             border-radius: 10px;
+            color: white;
         }
+
         .hero-content h1 {
             font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
+
         .hero-content p {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
         }
+
+        /* Add media queries for better responsiveness */
+        @media (min-width: 768px) {
+            .hero-content {
+                max-width: 60%; /* Increase width on medium screens */
+            }
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .hero-content p {
+                font-size: 1.5rem;
+            }
+        }
+
+@media (min-width: 1200px) {
+    .hero-content {
+        max-width: 50%; /* Larger width on larger screens */
+    }
+}
         .link-section {
             text-align: center;
             margin-top: 2rem;
@@ -90,6 +117,33 @@
         }
         .content-section ul li {
             margin-bottom: 0.5rem;
+        }
+        .publication-item {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: #f8f9fa; /* Light gray background */
+            border: 1px solid #dee2e6; /* Border for a professional look */
+            border-radius: 8px;
+        }
+
+        .publication-item h5 {
+            margin-bottom: 0.5rem;
+            font-weight: 600; /* Slightly bolder for emphasis */
+        }
+
+        .publication-item p {
+            margin-bottom: 0.25rem;
+            line-height: 1.6;
+        }
+
+        .publication-item .text-muted {
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-item .btn {
+            font-size: 0.85rem;
         }
     </style>
 </head>
@@ -244,25 +298,28 @@
             setActiveLink(this);
         });
 
-        document.getElementById('publications-link').addEventListener('click', function() {
-    document.getElementById('content-section').innerHTML = `
-        <h2>Publications</h2>
-        <div class="list-group">
-            <a href="https://e-thessalia.gr/" target="_blank" class="list-group-item list-group-item-action">
-                <h5 class="mb-1">Thessalia</h5>
-                <p class="mb-1">Christos Mitsiakis, "Visual dialogue above the water of the beach's bridge" at e-thessalia, date of publicity: 14.08.2022</p>
-            </a>
-            <a href="https://www.taxydromos.gr/" target="_blank" class="list-group-item list-group-item-action">
-                <h5 class="mb-1">Taxydromos</h5>
-                <p class="mb-1">Glykeria Ydraiou interviewing Manolis Papagrigorakis, "Volos can emerge as a great cultural center" at Taxydromos, date of publicity: 21.11.2021</p>
-            </a>
-            <div class="list-group-item">
-                <h5 class="mb-1">Mavrommatiana Nea</h5>
-                <p class="mb-1">Thomas Zoumbos, "Artistic Star Among Us" at Mavrommatiana Nea, period of publicity: 10-11.2019</p>
+        document.getElementById('publications-link').addEventListener('click', function () {
+        document.getElementById('content-section').innerHTML = `
+            <h2 class="mb-4">Publications</h2>
+            <div class="publication-item">
+                <h5>Thessalia</h5>
+                <p>Christos Mitsiakis, "Visual dialogue above the water of the beach's bridge"</p>
+                <span class="text-muted">Published on: 14.08.2022</span>
+                <a href="https://e-thessalia.gr/" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
             </div>
-        </div>
-    `;
-    setActiveLink(this);
+            <div class="publication-item">
+                <h5>Taxydromos</h5>
+                <p>Glykeria Ydraiou interviewing Manolis Papagrigorakis, "Volos can emerge as a great cultural center"</p>
+                <span class="text-muted">Published on: 21.11.2021</span>
+                <a href="https://www.taxydromos.gr/" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+            </div>
+            <div class="publication-item">
+                <h5>Mavrommatiana Nea</h5>
+                <p>Thomas Zoumbos, "Artistic Star Among Us"</p>
+                <span class="text-muted">Published on: 10-11.2019</span>
+            </div>
+        `;
+        setActiveLink(this);
 });
 
         function setActiveLink(element) {
@@ -272,6 +329,10 @@
             });
             element.classList.add('active');
         }
+        // Automatically select Exhibitions by default
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('exhibitions-link').click();
+    });
     </script>
 </body>
 </html>

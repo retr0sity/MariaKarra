@@ -5,6 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maria Karra</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .wrap-project {
+      height: 100vh;
+    }
+    .main-image {
+      max-width: 500px; /* Set a maximum width for the main image container */
+      max-height: 400px;
+      margin: 0 auto; /* Center the image container */
+    }
+    .main-image img {
+      width: 100%; /* Ensure the image scales down to fit the container */
+      height: auto;
+      border: 3px solid #ccc;
+      border-radius: 8px;
+    }
+    .thumbnails img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+    .thumbnails img.active-thumbnail {
+      border: 2px solid #007bff;
+      opacity: 1;
+    }
+    .thumbnails img:hover {
+      opacity: 1;
+    }
+    .back-button-wrap {
+      margin: 2rem;
+    }
+    .back-button{
+        /* background-color: #A17C2A; */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+  </style>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -12,29 +50,81 @@
     <!-- Include Header -->
     <%- include("partials/header.ejs") %>
 
-    <div class="container mt-4">
+    <div class="container mt-4 wrap-project">
+
+        <div class="text-center mt-4 back-button-wrap">
+            <a href="/work" class="btn back-button">Back to Work</a>
+        </div>
         <h1 class="text-center"><%= project.title %></h1>
         <p class="text-center"><%= project.description %></p>
 
-        <div class="image-gallery row">
-            <% project.images.forEach((image) => { %>
-                <div class="col-md-4 mb-4">
-                    <img src="<%= image %>" class="img-fluid img-shadow" alt="<%= project.title %>">
-                </div>
-            <% }) %>
+        <div class="image-gallery">
+            <!-- Κύρια Εικόνα -->
+            <div class="main-image text-center mb-4">
+                <img id="mainImage" src="<%= project.images[0] %>" class="img-fluid img-shadow" alt="<%= project.title %>">
+            </div>
+    
+            <!-- Μικρογραφίες -->
+            <div class="thumbnails d-flex justify-content-center gap-2">
+                <% project.images.forEach((image, index) => { %>
+                    <img 
+                        src="<%= image %>" 
+                        class="thumbnail img-thumbnail <%= index === 0 ? 'active-thumbnail' : '' %>" 
+                        alt="<%= project.title %>" 
+                        data-index="<%= index %>"
+                    >
+                <% }) %>
+            </div>
         </div>
-
-        <div class="text-center mt-4">
-            <a href="/work" class="btn btn-primary">Back to Work</a>
-        </div>
+        
     </div>
+    
+
 
     <!-- Include Footer -->
     <%- include("partials/footer.ejs") %>
-
+    
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainImage = document.getElementById("mainImage");
+            const thumbnails = document.querySelectorAll(".thumbnail");
+    
+            // Προσθήκη event listener σε κάθε μικρογραφία
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener("click", () => {
+                    // Ενημέρωση της κύριας εικόνας
+                    mainImage.src = thumbnail.src;
+    
+                    // Αφαίρεση active class από όλες τις μικρογραφίες
+                    thumbnails.forEach((thumb) => thumb.classList.remove("active-thumbnail"));
+    
+                    // Προσθήκη active class στην επιλεγμένη μικρογραφία
+                    thumbnail.classList.add("active-thumbnail");
+    
+                    // Ενημέρωση μικρογραφιών πριν και μετά
+                    updateThumbnails(index, thumbnails);
+                });
+            });
+    
+            function updateThumbnails(activeIndex, thumbnails) {
+                // Εμφάνιση μόνο των 2 πριν και 2 μετά
+                thumbnails.forEach((thumb, index) => {
+                    if (index < activeIndex - 2 || index > activeIndex + 2) {
+                        thumb.style.display = "none";
+                    } else {
+                        thumb.style.display = "inline-block";
+                    }
+                });
+            }
+    
+            // Αρχική ενημέρωση μικρογραφιών
+            updateThumbnails(0, thumbnails);
+        });
+    </script>
+    
 </body>
 </html>

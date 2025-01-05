@@ -64,9 +64,9 @@ app.get('/about', (req, res) => {
 app.get('/projects/:id', (req, res) => {
     const project = projects.find((p) => p.id === req.params.id);
   
-    // if (!project) {
-    //   return res.status(404).send('Project not found');
-    // }
+    if (!project) {
+      return res.status(404).send('Project not found');
+    }
   
     res.render('project.ejs', { project , currentPage: 'work' });
 });

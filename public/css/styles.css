@@ -1,3 +1,6 @@
+*{
+    font-family: "Libre Baskerville", serif;
+}
 /* Style for navigation links */
 .nav-link {
     position: relative;

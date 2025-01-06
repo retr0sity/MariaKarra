@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maria Karra</title>
   <style>
+    *{
+       font-family: "Libre Baskerville", serif;
+    }
     /* Style for navigation links */
       .nav-link {
           position: relative;
@@ -63,7 +66,7 @@
           }
       }
     .wrap-project {
-      height: 115vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -90,7 +93,6 @@
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-      border: 3px solid #ccc;
       border-radius: 8px;
     }
     .arrow {
@@ -156,10 +158,19 @@
       margin-top: 0;
       font-size: 1rem;
     }
+    @media (max-width: 1000px){
+      .wrap-project {
+        height: 115vh;
+      }
+    }
     @media (max-width: 768px) {
       .arrow {
         display: none; /* Hide arrows on mobile */
       }
+      .project-description {
+      margin-left: 0;
+      font-size: 0.7rem;
+    }
     }
     @media (max-width: 768px) {
       .image-gallery {

@@ -226,4 +226,61 @@ const projects = [
           './images/Sketch-It/sketch-it-image-9.jpeg.jpg',
         ],
       },
+      {
+        id: '16',
+        title: 'LEVEL 0',
+        description: `<iframe src="https://itch.io/embed/3227341" width="552" height="167" frameborder="0">
+                <a href="https://svelto-hotza.itch.io/level-0">LEVEL 0 by svelto hotza</a>
+            </iframe><br><br>LEVEL 0 is part of the multimedia installation You were playing. And while you were playing...you fell. The game delves into the theme of societal progress, using minimalist mechanics to explore the repetitive nature of struggles and the illusion of progress. Players navigate simple yet thought-provoking obstacles that reflect the cyclical challenges individuals face. The pixel art style evokes nostalgia while reinforcing the game's critique of systemic issues. Through its abstract gameplay, LEVEL 0 offers a powerful commentary on how societal patterns continuously shape our collective experience.`,
+        category: "game-art",
+        images: [
+            './images/level_0/screen5.png',
+            './images/level_0/thumb.png',
+            './images/level_0/screen2.png'
+        ]
+      },
+      {
+        id: '17',
+        title: '2D Platformer Project',
+        description: `<iframe frameborder="0" src="https://itch.io/embed/2887182" width="552" height="167"><a href="https://karrma-222.itch.io/2d-platformer0">2D Platformer.0 by Karrma 222</a></iframe><br><br>This is my 2D Platformer experimental project.`,
+        category: "game-art",
+        images: [
+            './images/2DPlatformer/game2_1.png',
+            './images/2DPlatformer/game2_2.png',
+            './images/2DPlatformer/game2_3.png'
+        ]
+      },
+      {
+        id: '18',
+        title: '2D Shooter Project',
+        description: `<iframe height="167" frameborder="0" src="https://itch.io/embed/2790870" width="552"><a href="https://karrma-222.itch.io/2d-shooter">2D Shooter by Karrma 222</a></iframe><br><br>This video game is considered to be a 2D Shooter Project.`,
+        category: "game-art",
+        images: [
+            './images/2DShooter/game3_1.png',
+            './images/2DShooter/game3_2.png',
+            './images/2DShooter/game3_3.png',
+        ]
+      },
+      {
+        id: '19',
+        title: 'Solar System Project',
+        description: `<iframe src="https://itch.io/embed/2786115" width="552" height="167" frameborder="0"><a href="https://karrma-222.itch.io/solar-system-with-karrma-backround-music">Solar System with Karrma  backround music by Karrma 222</a></iframe><br><br>This is my solar system project. I added the following components:
+
+        Mars
+        Mercury
+        Venuss
+        Saturn
+        Jupiter
+        Uranus
+        Neptune
+        A Mini Camera that is following Earth
+        Music that I published on spotify under the artistic name: Karrma, album: MYRTIS
+        New  Tectures for Venus and the Sun`,
+        category: "game-art",
+        images: [
+            './images/SolarSystem/solar1.png',
+            './images/SolarSystem/solar2.png',
+            './images/SolarSystem/solar3.png'
+        ]
+      }
 ];

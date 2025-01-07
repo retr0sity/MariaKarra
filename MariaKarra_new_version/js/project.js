@@ -25,4 +25,4 @@ project.images.forEach((image, index) => {
     thumbnails_dom.appendChild(img);
 })
 
-project_description_dom.textContent = project.description;
+project_description_dom.innerHTML = project.description;

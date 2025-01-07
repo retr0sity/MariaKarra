@@ -56,6 +56,11 @@
         a {
             text-decoration: none;
         }
+        .link-section a.active::before {
+        width: 100%;
+        left: 0;
+        }
+
     </style>
 </head>
 <body class="bg-light">
@@ -96,7 +101,7 @@
 
 <!-- Links Section -->
 <div class="link-section">
-    <a id="art">Art</a>
+    <a id="art" class="active">Art</a>
     <a id="game-art">Game Art</a>
     <a id="music">Music</a>
 </div>

@@ -3,6 +3,7 @@ const projects = [
         id: '1',
         title: 'THESIS',
         description: "The multimedia installation blended environmental art with sociopolitical commentary, exploring themes of collective memory and modern Greek identity through abstract expressionism in space. Sculptural elements appeared to merge with or emerge from the walls, creating a fluid, immersive environment. A central column was transformed into a carousel displaying artworks in each direction, symbolizing identity's layered nature. Embedded within this dynamic space were two art video games, 57 and LEVEL ZERO, whose pixel art aesthetics critically engaged with the medium’s evolution. This integration of tactile and digital elements bridged contemporary art and game design, offering a multifaceted experience.",
+        category: "art",
         images: [
           './images/THESIS/1_thesis.JPG',
           './images/THESIS/thesis-image-0.jpeg.JPG',
@@ -56,6 +57,7 @@ const projects = [
         id: '2',
         title: 'ADAF',
         description: 'In May 2024, Maria Karra showcased the Myrtis project at the Athens Digital Arts Festival (ADAF), presenting a thought-provoking multimedia installation. The installation invited visitors into an immersive experience, guided by narrators using dual headsets to listen to the Myrtis e.p.. This innovative approach combined sound, storytelling, and visual elements, creating an intimate journey through the themes and historical resonance embodied in the project. .',
+        category: "art",
         images: [
           './images/myrtis/myrtis-image-0.jpg',
           './images/myrtis/myrtis-image-1.jpeg',
@@ -83,6 +85,7 @@ const projects = [
         id: '3',
         title: 'DISTUPTION',
         description: '',
+        category: "art",
         images: [
           './images/Disruption/3_disruption.jpeg',
           './images/Disruption/disruption-image-0.jpeg.png',
@@ -101,6 +104,7 @@ const projects = [
         id: '4',
         title: 'MYRTIS',
         description: "The Myrtis project has been a pivotal part of my artistic evolution, merging history, contemporary art, music, and storytelling. Inspired by the reconstructed face of a 2,500-year-old Athenian girl, Myrtis, the project delves into themes of identity, resilience, and the connection between past and present. I contributed to the 2021 Triptych of Myrtis exhibition at the National War Museum in Athens, showcasing Myrtis as a symbol of cultural continuity. In collaboration with Christoforos Alamanis, I co-created the Myrtis EP, a six-song experimental electronic music project that narrates Myrtis' story. Currently, I am illustrating a fairytale inspired by Myrtis and working on concept sketches for a literary work by Dr. Peny Tsakanikou, a researcher in Palaeolithic archaeology. Looking ahead, I am collaborating with Manolis Papagrigorakis on the potential creation of a video game based on Myrtis' story, combining my love for game design with historical storytelling.",
+        category: "art",
         images: [
           './images/3_Myrtis-Project/myrtis-image-0.jpeg.jpg',
           './images/3_Myrtis-Project/myrtis-image-0.jpeg16.png',
@@ -126,6 +130,7 @@ const projects = [
         id: '5',
         title: 'FAMILY SECRETS',
         description: '',
+        category: "art",
         images: [
           './images/family-secrets/5_family-secrets.jpg',
           './images/family-secrets/family-secrets-image-0.jpeg.JPG',
@@ -138,6 +143,7 @@ const projects = [
         id: '6',
         title: 'IMPRINT-ED',
         description: '',
+        category: "art",
         images: [
           './images/Polaroid-Imprint-ed/5_imprint-ed.jpg',
           './images/Polaroid-Imprint-ed/polaroids-image-0.jpeg.JPG',
@@ -173,6 +179,7 @@ const projects = [
         id: '7',
         title: 'QUARANTINE REGISTRATION',
         description: '',
+        category: "art",
         images: [
           './images/Quarantine-registration/quarantine-registration-image-0.jpeg.JPG',
           './images/Quarantine-registration/quarantine-registration-image-1.jpeg.JPG',
@@ -182,6 +189,7 @@ const projects = [
         id: '8',
         title: 'ERASMUS RESIDENCY',
         description: '',
+        category: "art",
         images: [
           './images/Erasmus-Residency/erasmus-image-0.jpeg.JPG',
           './images/Erasmus-Residency/family-secrets-image-1.jpeg.JPG',
@@ -191,6 +199,7 @@ const projects = [
         id: '9',
         title: 'ZAGREB',
         description: '',
+        category: "art",
         images: [
           './images/Zagreb/8_zagreb.JPG',
           './images/Zagreb/zagreb-image-0.jpeg.JPG',

@@ -282,5 +282,42 @@ const projects = [
             './images/SolarSystem/solar2.png',
             './images/SolarSystem/solar3.png'
         ]
+      },
+      {
+        id: '20',
+        title: 'Experimental Board Game',
+        description: '"Experimental Board Game" is an innovative project still in its early stages of development. Inspired by the principles of Arte Útil, the game aims to foster creativity, collaboration, and problem-solving within the city of Karlsruhe. Set in 2024, players explore an interactive, thermochromic game board, where the city layout is revealed as they engage with the environment. Through observational cards such as Exploration, Listening, and Read Graffiti, players uncover social, cultural, and environmental issues within the city. The game encourages players to apply creative solutions to problems linked to the 17 Sustainable Development Goals (SDGs). With components like "Paralogés" cards, structures, and blank cards, players are invited to think abstractly and contribute their own ideas. Currently in its first stages of creation, Experimental Board Game seeks to transform play into a meaningful social experience, where creativity and collective action drive the narrative.',
+        category: "game-art",
+        images: [
+            './images/Experimental-Board-Game/experimental-board-game-image-0.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-1.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-2.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-3.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-4.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-5.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-6.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-7.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-8.jpeg.jpeg',
+            './images/Experimental-Board-Game/experimental-board-game-image-9.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-10.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-11.jpeg.png',
+            './images/Experimental-Board-Game/experimental-board-game-image-12.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-13.jpeg.JPG',
+            './images/Experimental-Board-Game/experimental-board-game-image-14.jpeg.JPG',
+        ]
+      },
+      {
+        id: '21',
+        title: 'Research of Trapped Vibes',
+        description: 'The prototype of the art game Research of Trapped Vibes was developed during my Erasmus Studies Program at ESBAN in Nîmes, France, as part of a project that took place at the Le Vallon du Villaret artist residency. During this residency, I recorded a live performance, which served as the foundation for creating a short video game designed to complement the recording. Unfortunately, the project files were lost, and the game could not be completed.',
+        category: "game-art",
+        images: [
+            './images/Research-of-Trapped-Vibes/screenshots/trapped-vibes-image-0.jpeg.PNG',
+            './images/Research-of-Trapped-Vibes/screenshots/trapped-vibes-image-1.jpeg.PNG',
+            './images/Research-of-Trapped-Vibes/screenshots/trapped-vibes-image-2.jpeg.PNG',
+            './images/Research-of-Trapped-Vibes/screenshots/trapped-vibes-image-3.jpeg.PNG',
+            './images/Research-of-Trapped-Vibes/screenshots/trapped-vibes-image-4.jpeg.PNG',
+            './images/Research-of-Trapped-Vibes/screenshots/trapped-vibes-image-5.jpeg.PNG',
+        ]
       }
 ];

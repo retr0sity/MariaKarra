@@ -26,3 +26,4 @@ project.images.forEach((image, index) => {
 })
 
 project_description_dom.innerHTML = project.description;
+

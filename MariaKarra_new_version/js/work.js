@@ -46,3 +46,5 @@ document.getElementById("music").addEventListener("click", () => renderProjects(
 
 // Default category to load on page load
 renderProjects("art");
+
+

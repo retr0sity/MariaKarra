@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Karra</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Custom styles for the header and about section */
+        .hero-section {
+            position: relative;
+            height: 70vh;
+            background-image: url('images/kremala.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            top: 10%;
+            left: 14.9%;
+            max-width: 90%; /* Ensure responsiveness for smaller screens */
+
+            padding: 1rem; /* Add padding for spacing */
+
+            border-radius: 10px;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Add media queries for better responsiveness */
+        @media (min-width: 768px) {
+            .hero-content {
+                max-width: 60%; /* Increase width on medium screens */
+            }
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .hero-content p {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .hero-content {
+                max-width: 50%; /* Larger width on larger screens */
+            }
+        }
+        .link-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .link-section a {
+            margin: 0 15px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+        }
+        .link-section a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        .link-section a:hover::before, .link-section a.active::before {
+            width: 100%;
+            left: 0;
+        }
+        .content-section {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .content-section h2 {
+            margin-bottom: 1.5rem;
+        }
+        .content-section .row {
+            justify-content: center;
+        }
+        .content-section .col-md-6 {
+            margin-bottom: 2rem;
+        }
+        .content-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .content-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        .publication-item {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: #f8f9fa; /* Light gray background */
+            border: 1px solid #dee2e6; /* Border for a professional look */
+            border-radius: 8px;
+        }
+
+        .publication-item h5 {
+            margin-bottom: 0.5rem;
+            font-weight: 600; /* Slightly bolder for emphasis */
+        }
+
+        .publication-item p {
+            margin-bottom: 0.25rem;
+            line-height: 1.6;
+        }
+
+        .publication-item .text-muted {
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-item .btn {
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+<!-- Hero Section -->
+<div class="hero-section">
+
+    <!-- Header Section -->
+    <header id="navbar" class="text-white py-4 sticky-top navbar-shadow" style="background: linear-gradient(to bottom, #A17C2A 50%, rgba(161, 124, 42, 0.3) 100%);">
+        <div class="container d-flex justify-content-between align-items-center header-content">
+            <!-- Logo -->
+            <h1 class="h4 mb-0">Maria Karra</h1>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link text-white mx-1 fs-5">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about.html" class="nav-link text-white mx-1 fs-5 active">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/work.html" class="nav-link text-white mx-1 fs-5">Work</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Social Media Icons -->
+            <div class="social-icons d-flex">
+                <a href="https://www.instagram.com/mariakarra222/?__pwa=1" class="media-icons text-white mx-3 fs-5"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/MariaKarra2001" class="media-icons text-white mx-3 fs-5"><i class="bi bi-facebook"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-content">
+        <h1>Maria Karra</h1>
+        <p>"Maria Karra is a contemporary artist blending fine arts, game design, and interdisciplinary research. Her work explores the intersections of art, culture, and technology, focusing on narrative-driven experiences and experimental design."</p>
+    </div>
+</div>
+
+<!-- Links Section -->
+<div class="link-section">
+    <a id="exhibitions-link">Exhibitions</a>
+    <a id="publications-link">Publications</a>
+</div>
+
+<!-- Content Section -->
+<div class="content-section container" id="content-section">
+    <!-- Dynamic content will be loaded here -->
+</div>
+
+<!-- Footer Section -->
+<footer class="text-white py-3" style="background-color: #A17C2A;">
+    <div class="container d-flex flex-column align-items-center">
+        <!-- Footer Text -->
+        <p class="mb-1 fs-7">Maria Karra &copy; 2025</p>
+        <!-- Footer Social Media Icons -->
+        <div class="d-flex">
+            <a href="mailto:MariaKarra2001@gmail.com" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-envelope"></i></a>
+            <a href="https://www.instagram.com/mariakarra222/?__pwa=1" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-instagram"></i></a>
+            <a href="https://open.spotify.com/artist/6lfL1zlYt8OfR49FD6Cmbn?si=pGgHgYZCR4-qnL-8-2Eb0g" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/karrma/1708261563" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-apple"></i></a>
+            <a href="https://www.facebook.com/MariaKarra2001" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('exhibitions-link').addEventListener('click', function() {
+        document.getElementById('content-section').innerHTML = `
+                <h2>Exhibitions</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>2025</h3>
+                        <h3>Solo Show</h3>
+                        <ul>
+                            <li>We were playing. And while we were Playing, we Fell... 2025.02 future, Aristotle University of Thessaloniki, MFA Thesis Solo Exhibition, Thessaloniki, Greece</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+
+                        <ul>
+                            <!-- No group exhibitions for 2025 -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>2023</h3>
+                        <h3>Solo Show</h3>
+                        <ul>
+                            <li>Myrtis on-going, Myrtis Museum and Public Spaces, Installations, Performances and Interventions in collaboration with the Myrtis Museum and the EP:FW art team (position of Art Director and Founder), Athens, Thessaloniki Greece</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+
+                        <ul>
+                            <!-- No group exhibitions for 2023 -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>2022</h3>
+                        <h3>Solo Show</h3>
+                        <ul>
+                            <li>The Dream.0.1 Ironically?, Public Performance during Alternative rap's Concert, Palais 12, Brussels, Belgium</li>
+                            <li>What's hanging on the water and missing vocals?, Public installations, interventions & performances around the city Curated by Christoforos Alamanis, Volos, Greece</li>
+                            <li>The city is a beautiful totodile, Public Interventions Curated by Christoforos Alamanis, Nimes, France</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <br><br>
+                        <h3>Group Exhibitions</h3>
+                        <ul>
+                            <li>Residency, Le Vallon du Villaret: Parc de loisirs nature et d'art et art en Lozere, ESBAN (3days), Working on Video Game creation as an artistic medium and performances, Vallon, France</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>2021</h3>
+                        <h3>Solo Show</h3>
+                        <ul>
+                            <li>Tickets In case of emergency, take one, it’s my artwork, Public Interventions around the city, Thessaloniki, Greece</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <br><br>
+                        <h3>Group Exhibitions</h3>
+                        <ul>
+                            <li>Novarte, Myro Gallery, Thessaloniki, Greece</li>
+                            <li>Τhe triptych of Myrtis in the War Museum : Shape, Art, Copyrights, National War Museum, Athens, Greece</li>
+                            <li>Untitled, Art Number 23, Athens, Greece</li>
+                            <li>Painterly, Las Laguna Art Gallery, Las Laguna Beach Los Angeles, California</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>2020</h3>
+                        <ul>
+                            <!-- No solo exhibitions for 2020 -->
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <br><br>
+                        <h3>Group Exhibitions</h3>
+                        <ul>
+                            <li>Erotic as Human Nature, Happenstance Gallery, United Kingdom</li>
+                            <li>Abstract, Happenstance Gallery, United Kingdom</li>
+                            <li>How I see the Future, 8th Biennale of Illustration, Zagreb, Croatia</li>
+                            <li>Resilience Project, The Metropolitan Organisation of Museums of Visual Arts of Thessaloniki, Thessaloniki, Greece</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>2019</h3>
+                        <ul>
+                            <!-- No solo exhibitions for 2019 -->
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <br><br>
+                        <h3>Group Exhibitions</h3>
+                        <ul>
+                            <li>Katakrypsis 216, Project with the artist Dimitris Alithinos bitwix University students of the Aristotle University of Thessaloniki, Thessaloniki, Greece</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>2017</h3>
+                        <h3>Solo Show</h3>
+                        <ul>
+                            <li>The Voyage (1rst award), Cultural Center of Nea Ionia, Volos, Greece</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3></h3>
+                        <ul>
+                            <!-- No group exhibitions for 2017 -->
+                        </ul>
+                    </div>
+                </div>
+            `;
+        setActiveLink(this);
+    });
+
+    document.getElementById('publications-link').addEventListener('click', function () {
+        document.getElementById('content-section').innerHTML = `
+            <h2 class="mb-4">Publications</h2>
+            <div class="publication-item">
+                <h5>Thessalia</h5>
+                <p>Christos Mitsiakis, "Visual dialogue above the water of the beach's bridge"</p>
+                <span class="text-muted">Published on: 14.08.2022</span>
+                <a href="https://e-thessalia.gr/" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+            </div>
+            <div class="publication-item">
+                <h5>Taxydromos</h5>
+                <p>Glykeria Ydraiou interviewing Manolis Papagrigorakis, "Volos can emerge as a great cultural center"</p>
+                <span class="text-muted">Published on: 21.11.2021</span>
+                <a href="https://www.taxydromos.gr/" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+            </div>
+            <div class="publication-item">
+                <h5>Mavrommatiana Nea</h5>
+                <p>Thomas Zoumbos, "Artistic Star Among Us"</p>
+                <span class="text-muted">Published on: 10-11.2019</span>
+            </div>
+        `;
+        setActiveLink(this);
+    });
+
+    function setActiveLink(element) {
+        var links = document.querySelectorAll('.link-section a');
+        links.forEach(function(link) {
+            link.classList.remove('active');
+        });
+        element.classList.add('active');
+    }
+    // Automatically select Exhibitions by default
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('exhibitions-link').click();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Karra</title>
+    <style>
+        *{
+            font-family: "Libre Baskerville", serif;
+        }
+        /* Style for navigation links */
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        /* Underline effect for navigation links */
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background-color: white;
+            transition: left 0.5s ease-in-out;
+        }
+        /* Apply underline effect on hover and active state */
+        .nav-link:hover::before, .nav-link.active::before {
+            left: 0;
+        }
+        /* Transition effect for social media icons */
+        .media-icons {
+            transition: transform 0.2s ease-in-out;
+        }
+        /* Scale effect on hover for social media icons */
+        .media-icons:hover {
+            transform: scale(1.5);
+        }
+        /* Shadow effect for the navbar */
+        .navbar-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        /* Thicker shadow effect for the navbar */
+        .navbar-shadow-thick {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        /* Transition effect for the navbar */
+        #navbar {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        /* Center elements in the header on mobile devices */
+        @media (max-width: 768px) {
+            .header-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .header-content nav {
+                margin-top: 10px;
+            }
+            .header-content .social-icons {
+                margin-top: 10px;
+            }
+        }
+        .wrap-project {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin: 0 auto;
+            max-width: 800px;
+            padding-bottom: 2rem;
+            position: relative;
+        }
+        .main-image {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .main-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        }
+        .arrow:active {
+            transform: translateY(-50%) scale(0.9);
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .thumbnails {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 10px 0;
+        }
+        .thumbnails img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        .thumbnails img.active-thumbnail {
+            border: 2px solid #007bff;
+            opacity: 1;
+        }
+        .thumbnails img:hover {
+            opacity: 1;
+        }
+        .back-button-wrap {
+            margin: 2rem;
+        }
+        .back-button{
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+        .project-title {
+            text-align: center;
+            margin-left: 2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .project-description {
+            text-align: left;
+            margin-left: 2rem;
+            margin-top: 0;
+            font-size: 1rem;
+        }
+        @media (max-width: 1000px){
+            .wrap-project {
+                height: 115vh;
+            }
+        }
+        @media (max-width: 768px) {
+            .arrow {
+                display: none; /* Hide arrows on mobile */
+            }
+            .project-description {
+                margin-left: 0;
+                font-size: 0.7rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .image-gallery {
+                padding-bottom: 4rem;
+            }
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Header Section -->
+<header id="navbar" class="text-white py-4 sticky-top navbar-shadow" style="background: linear-gradient(to bottom, #A17C2A 50%, rgba(161, 124, 42, 0.3) 100%);">
+    <div class="container d-flex justify-content-between align-items-center header-content">
+        <!-- Logo -->
+        <h1 class="h4 mb-0">Maria Karra</h1>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="/" class="nav-link text-white mx-1 fs-5">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about.html" class="nav-link text-white mx-1 fs-5">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/work.html" class="nav-link text-white mx-1 fs-5 active">Work</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Social Media Icons -->
+        <div class="social-icons d-flex">
+            <a href="https://www.instagram.com/mariakarra222/?__pwa=1" class="media-icons text-white mx-3 fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/MariaKarra2001" class="media-icons text-white mx-3 fs-5"><i class="bi bi-facebook"></i></a>
+        </div>
+    </div>
+</header>
+
+<div class="container mt-4 wrap-project">
+
+    <div class="text-center mt-4 back-button-wrap">
+        <a href="/work.html" class="btn back-button">Back to Work</a>
+    </div>
+    <h1 class="project-title"></h1>
+    <!-- <p class="project-description"><%= project.description %></p> -->
+
+    <div class="image-gallery">
+        <!-- Κύρια Εικόνα -->
+        <div class="main-image text-center mb-4" id="mainImageContainer">
+            <img id="mainImage" src="" class="img-fluid img-shadow" alt="">
+        </div>
+        <button class="arrow left">&lt;</button>
+        <button class="arrow right">&gt;</button>
+
+        <!-- Μικρογραφίες -->
+        <div class="thumbnails d-flex justify-content-center gap-2">
+<!--            <% project.images.forEach((image, index) => { %>-->
+<!--            <img-->
+<!--                    src="<%= image %>"-->
+<!--                    class="thumbnail img-thumbnail <%= index === 0 ? 'active-thumbnail' : '' %>"-->
+<!--                    alt="<%= project.title %>"-->
+<!--                    data-index="<%= index %>"-->
+<!--            >-->
+<!--            <% }) %>-->
+        </div>
+        <p class="project-description"></p>
+    </div>
+
+</div>
+
+
+
+<!-- Footer Section -->
+<footer class="text-white py-3" style="background-color: #A17C2A;">
+    <div class="container d-flex flex-column align-items-center">
+        <!-- Footer Text -->
+        <p class="mb-1 fs-7">Maria Karra &copy; 2025</p>
+        <!-- Footer Social Media Icons -->
+        <div class="d-flex">
+            <a href="mailto:MariaKarra2001@gmail.com" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-envelope"></i></a>
+            <a href="https://www.instagram.com/mariakarra222/?__pwa=1" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-instagram"></i></a>
+            <a href="https://open.spotify.com/artist/6lfL1zlYt8OfR49FD6Cmbn?si=pGgHgYZCR4-qnL-8-2Eb0g" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/karrma/1708261563" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-apple"></i></a>
+            <a href="https://www.facebook.com/MariaKarra2001" class="text-white mx-3 mx-md-4 mx-lg-5 fs-4 media-icons"><i class="bi bi-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/projects.js"></script>
+<script src="./js/project.js"></script>
+
+<script>
+    // Add shadow effect to navbar on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 10) {
+            navbar.classList.add('navbar-shadow-thick');
+        } else {
+            navbar.classList.remove('navbar-shadow-thick');
+        }
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const mainImage = document.getElementById("mainImage");
+        const mainImageContainer = document.getElementById("mainImageContainer");
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        const leftArrow = document.querySelector(".arrow.left");
+        const rightArrow = document.querySelector(".arrow.right");
+        let currentIndex = 0;
+
+        function updateMainImage(index) {
+            mainImage.src = thumbnails[index].src;
+            thumbnails.forEach((thumb) => thumb.classList.remove("active-thumbnail"));
+            thumbnails[index].classList.add("active-thumbnail");
+            updateThumbnails(index, thumbnails);
+        }
+
+        leftArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : thumbnails.length - 1;
+            updateMainImage(currentIndex);
+        });
+
+        rightArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex < thumbnails.length - 1) ? currentIndex + 1 : 0;
+            updateMainImage(currentIndex);
+        });
+
+        mainImageContainer.addEventListener("click", (event) => {
+            const containerWidth = mainImageContainer.offsetWidth;
+            const clickPosition = event.offsetX;
+
+            if (clickPosition < containerWidth / 2) {
+                // Clicked on the left side
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : thumbnails.length - 1;
+            } else {
+                // Clicked on the right side
+                currentIndex = (currentIndex < thumbnails.length - 1) ? currentIndex + 1 : 0;
+            }
+            updateMainImage(currentIndex);
+        });
+
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener("click", () => {
+                currentIndex = index;
+                updateMainImage(currentIndex);
+            });
+        });
+
+        function updateThumbnails(activeIndex, thumbnails) {
+            thumbnails.forEach((thumb, index) => {
+                if (index < activeIndex - 2 || index > activeIndex + 2) {
+                    thumb.style.display = "none";
+                } else {
+                    thumb.style.display = "inline-block";
+                }
+            });
+        }
+
+        updateThumbnails(0, thumbnails);
+    });
+</script>
+
+</body>
+</html>

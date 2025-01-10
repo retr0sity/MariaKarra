@@ -197,7 +197,7 @@ const projects = [
       },
       {
         id: '9',
-        title: 'ZAGREB',
+        title: '8TH BIENNALE OF ILLUSTRATION',
         description: '',
         category: "art",
         images: [

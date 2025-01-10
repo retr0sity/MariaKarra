@@ -25,5 +25,14 @@ project.images.forEach((image, index) => {
     thumbnails_dom.appendChild(img);
 })
 
-project_description_dom.innerHTML = project.description;
+const descriptionElement = document.querySelector('.project-description');
+if (project.category === 'game-art') {
+    descriptionElement.innerHTML = `
+        <div class="game-embed-container mb-4">
+            ${project.description}
+        </div>
+    `;
+} else {
+    descriptionElement.textContent = project.description;
+}
 

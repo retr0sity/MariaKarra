@@ -66,10 +66,9 @@
             }
         }
         .wrap-project {
-            height: 115vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            height: auto;
+            min-height: 100vh;
+            padding-bottom: 2rem;
         }
         .image-gallery {
             display: flex;
@@ -175,6 +174,38 @@
         @media (max-width: 768px) {
             .image-gallery {
                 padding-bottom: 4rem;
+            }
+        }
+        /* Game project specific styles */
+        .game-embed-container {
+            width: 100%;
+            max-width: 552px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .game-embed-container iframe {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        /* Adjust wrap-project height for game projects */
+        .wrap-project {
+            height: auto;
+            min-height: 100vh;
+            padding-bottom: 2rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .game-embed-container {
+                padding: 0 10px;
+            }
+            
+            .project-description {
+                margin: 1rem auto;
+                max-width: 100%;
+                padding: 0 15px;
             }
         }
     </style>

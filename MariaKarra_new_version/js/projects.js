@@ -197,7 +197,7 @@ const projects = [
       },
       {
         id: '9',
-        title: '8TH BIENNALE OF ILLUSTRATION',
+        title: '8TH BIENNALE OF ILLUSTRATION ZAGREB',
         description: '',
         category: "art",
         images: [
